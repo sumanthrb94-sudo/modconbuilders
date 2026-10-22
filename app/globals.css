@@ -17,7 +17,14 @@
 
 @layer components {
   .container-content {
-    @apply mx-auto w-full max-w-content px-5 lg:px-0;
+    @apply mx-auto w-full max-w-content px-5 xl:px-0;
+  }
+  /* One vertical rhythm for every content section. */
+  .section-space {
+    @apply pt-16 lg:pt-24;
+  }
+  .m1-space {
+    @apply pt-20 lg:pt-32;
   }
   .eyebrow {
     @apply text-[13px] font-medium uppercase tracking-[0.01em] text-body;
@@ -29,10 +36,10 @@
     @apply font-accent italic text-gold;
   }
   .btn-pill {
-    @apply inline-flex items-center gap-3 rounded-full bg-gold px-6 py-3 text-[16px] text-white transition-colors hover:bg-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+    @apply inline-flex min-h-[44px] items-center gap-3 rounded-full bg-gold px-6 py-3 text-[16px] text-white transition-colors hover:bg-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-3 rounded-full border border-ink px-5 py-2.5 text-[14px] text-ink transition-colors hover:bg-ink hover:text-white;
+    @apply inline-flex min-h-[44px] items-center gap-3 rounded-full border border-ink px-5 py-2.5 text-[14px] text-ink transition-colors hover:bg-ink hover:text-white;
   }
   .card {
     @apply rounded-2xl border border-line/70 bg-white;

@@ -63,7 +63,7 @@ export default function ModconOnePage() {
       </section>
 
       {/* Experience it before you decide */}
-      <section id="why" className="scroll-mt-20 px-5 pb-20 pt-12 lg:px-[38px] lg:pb-[180px]">
+      <section id="why" className="scroll-mt-20 px-5 pt-12 lg:px-9 lg:pt-16">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{intro.ctaTitle}</p>
           <h2 className={`${title} mx-auto max-w-[880px]`}>{intro.ctaBody}</h2>
@@ -73,12 +73,12 @@ export default function ModconOnePage() {
           source="Modcon One: quick site visit"
           submitLabel="Schedule a Site Visit"
           columns="md:grid-cols-3"
-          className="mt-12 lg:mt-[70px]"
+          className="mt-10 lg:mt-12"
         />
       </section>
 
       {/* About */}
-      <section id="about" className="scroll-mt-20 px-5 text-center" data-reveal>
+      <section id="about" className="m1-space scroll-mt-20 px-5 text-center" data-reveal>
         <p className={eyebrow}>{about.eyebrow}</p>
         <div className="mx-auto max-w-[728px] space-y-8 font-helvetica text-[21px] leading-[1.4] text-black lg:text-[26px]">
           {about.paragraphs.map((p) => (
@@ -103,12 +103,12 @@ export default function ModconOnePage() {
       </section>
 
       {/* Design philosophy */}
-      <section className="pt-28 lg:pt-[160px]">
+      <section className="m1-space">
         <div className="px-5 text-center" data-reveal>
           <p className={eyebrow}>{philosophy.eyebrow}</p>
           <p className="mx-auto max-w-[558px] font-helvetica text-[21px] leading-[1.4] text-black lg:text-[26px]">{philosophy.title}</p>
         </div>
-        <div className="mt-10 overflow-hidden" aria-hidden>
+        <div className="mt-10 overflow-hidden lg:mt-12" aria-hidden>
           <div className="flex w-max animate-marquee gap-4 motion-reduce:animate-none">
             {[...images.m1Gallery, ...images.m1Gallery].map((src, i) => (
               <div key={`${src}-${i}`} className="relative h-[220px] w-[294px] shrink-0 overflow-hidden rounded-lg lg:h-[309px] lg:w-[412px]">
@@ -117,18 +117,18 @@ export default function ModconOnePage() {
             ))}
           </div>
         </div>
-        <p className="mt-12 whitespace-pre-line px-5 text-center font-helvetica text-[21px] leading-[1.4] text-black lg:text-[26px]" data-reveal>
+        <p className="mt-10 whitespace-pre-line px-5 lg:mt-12 text-center font-helvetica text-[21px] leading-[1.4] text-black lg:text-[26px]" data-reveal>
           {philosophy.body.replace('living. ', 'living.\n')}
         </p>
       </section>
 
       {/* Villaments */}
-      <section id="living" className="scroll-mt-20 px-5 pt-24 lg:px-20 lg:pt-28">
+      <section id="living" className="m1-space scroll-mt-20 px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{villaments.eyebrow}</p>
           <h2 className={title}>{villaments.title}</h2>
         </div>
-        <div className="mx-auto mt-12 grid max-w-[1280px] gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-3 lg:mt-12 lg:gap-7">
           {villaments.items.map((item, i) => (
             <article key={item.title} data-reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
@@ -142,8 +142,8 @@ export default function ModconOnePage() {
       </section>
 
       {/* Syl Residences */}
-      <section className="px-5 pt-24 lg:px-20 lg:pt-28">
-        <div className="mx-auto grid max-w-[1280px] items-center gap-10 md:grid-cols-2">
+      <section className="m1-space px-5 lg:px-9">
+        <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[16/9] overflow-hidden rounded-lg" data-reveal>
             <Image src={images.m1SylTower} alt="MODCON Syl Residences tower against a clear sky" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
           </div>
@@ -163,13 +163,13 @@ export default function ModconOnePage() {
       </section>
 
       {/* Commercial zone */}
-      <section className="px-5 pt-24 lg:px-9 lg:pt-[140px]">
+      <section className="m1-space px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{commercial.eyebrow}</p>
           <h2 className={`${title} text-ink`}>{commercial.title}</h2>
           <p className="mt-4 font-helvetica text-[16px] capitalize text-[#323232] lg:text-[18px]">{commercial.body}</p>
         </div>
-        <div className="mt-12 grid gap-7 md:grid-cols-2 lg:mt-[70px] lg:grid-cols-3">
+        <div className="mt-10 grid gap-7 md:grid-cols-2 lg:mt-12 lg:grid-cols-3">
           {commercial.items.map((item) => (
             <article key={item.title} className="rounded-lg bg-[#F7F7F7] px-6 pb-7 pt-7 text-center" data-reveal>
               <span className="mx-auto block h-px w-[244px] max-w-full bg-black/80" aria-hidden />
@@ -182,13 +182,13 @@ export default function ModconOnePage() {
       </section>
 
       {/* Wellness & club-house */}
-      <section className="px-5 pt-24 lg:px-9 lg:pt-[140px]">
+      <section className="m1-space px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{wellness.eyebrow}</p>
           <h2 className={`${title} mx-auto max-w-[690px] lg:leading-[1.5]`}>{wellness.title}</h2>
           <p className="mt-3 font-helvetica text-[16px] capitalize text-body lg:text-[18px]">{wellness.body}</p>
         </div>
-        <div className="mt-9 grid gap-7 md:grid-cols-2">
+        <div className="mt-10 grid gap-7 md:grid-cols-2 lg:mt-12">
           {wellness.items.map((item) => (
             <article key={item.title} className="rounded-lg bg-sand p-2.5" data-reveal>
               <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-md sm:aspect-[651/336]">
@@ -206,12 +206,12 @@ export default function ModconOnePage() {
       </section>
 
       {/* Location */}
-      <section id="location" className="scroll-mt-20 px-5 pt-24 lg:px-9 lg:pt-[140px]">
+      <section id="location" className="m1-space scroll-mt-20 px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{location.eyebrow}</p>
           <h2 className="font-sans text-[28px] font-medium tracking-[-0.02em] text-black lg:text-[32px]">{location.title}</h2>
         </div>
-        <div className="mt-10 h-[360px] overflow-hidden rounded-lg lg:h-[600px]">
+        <div className="mt-10 h-[360px] overflow-hidden rounded-lg lg:mt-12 lg:h-[560px]">
           <iframe
             title={`Map: ${location.address}`}
             src={mapEmbedSrc}
@@ -241,7 +241,7 @@ export default function ModconOnePage() {
       </section>
 
       {/* Booking form */}
-      <section id="visit" className="scroll-mt-20 px-5 pt-20 lg:px-9 lg:pt-24">
+      <section id="visit" className="m1-space scroll-mt-20 px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className="mb-3 font-form text-[14px] text-body">{visit.eyebrow}</p>
           <h2 className="font-form text-[16px] font-medium capitalize text-black">{visit.body}</h2>
@@ -251,23 +251,23 @@ export default function ModconOnePage() {
           source="Modcon One: site visit booking"
           submitLabel="Submit"
           columns="md:grid-cols-2"
-          className="mt-8"
+          className="mt-10 lg:mt-12"
         />
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="scroll-mt-20 px-5 pt-24 lg:px-9 lg:pt-[120px]">
+      <section id="faq" className="m1-space scroll-mt-20 px-5 lg:px-9">
         <div className="max-w-[830px]" data-reveal>
           <h2 className="font-form text-[20px] font-medium tracking-[-0.02em] text-black">{faq.title}</h2>
           <p className="mt-6 font-form text-[20px] leading-[1.5] tracking-[-0.02em] text-black">{faq.body}</p>
         </div>
-        <div className="mt-12">
+        <div className="mt-10 lg:mt-12">
           <Faq items={faq.items} />
         </div>
       </section>
 
       {/* Closing */}
-      <section className="relative mt-24 flex min-h-[900px] items-center justify-center px-5 py-24 lg:mt-[120px] lg:min-h-[1180px]">
+      <section className="relative mt-20 flex min-h-[760px] items-center justify-center px-5 py-24 lg:mt-32 lg:min-h-[1000px]">
         <Image src={images.m1Closing} alt="" fill sizes="100vw" className="object-cover" aria-hidden />
         <div className="relative flex min-h-[620px] w-full max-w-[604px] flex-col items-center justify-between bg-white px-6 py-10 text-center lg:min-h-[760px]" data-reveal>
           <p className="font-sans text-[20px] font-medium leading-[1.5] text-black lg:text-[22px]">

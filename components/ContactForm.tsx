@@ -129,7 +129,7 @@ export default function ContactForm({ fields, source, submitLabel, variant = 'li
           disabled={status.state === 'sending'}
           className={
             dark
-              ? 'font-display text-[17px] text-white transition-colors [font-variant-caps:small-caps] hover:text-gold disabled:opacity-60'
+              ? 'min-h-[44px] px-6 font-display text-[17px] text-white transition-colors [font-variant-caps:small-caps] hover:text-gold disabled:opacity-60'
               : 'w-full border border-black px-6 py-3 text-[16px] text-black transition-colors hover:bg-black hover:text-white disabled:opacity-60'
           }
         >

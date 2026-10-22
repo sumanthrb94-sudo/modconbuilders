@@ -22,7 +22,7 @@ export default function HomePage() {
           <p className="mx-auto mt-6 max-w-[400px] text-[16px] leading-[1.4]">{hero.body}</p>
           <Link
             href="/contact"
-            className="mt-6 inline-block border-b-2 border-paper px-5 pb-2 text-[16px] transition-colors hover:border-gold hover:text-white"
+            className="mt-6 inline-flex min-h-[44px] items-end border-b-2 border-paper px-5 pb-2 text-[16px] transition-colors hover:border-gold hover:text-white"
           >
             Reach Us Out
           </Link>
@@ -30,8 +30,8 @@ export default function HomePage() {
       </section>
 
       {/* 2. Welcome / legacy */}
-      <section className="container-content pt-10 lg:pt-11">
-        <div className="grid gap-6 md:grid-cols-[1fr_380px] md:gap-12 lg:grid-cols-[573px_380px] lg:justify-between">
+      <section className="container-content section-space">
+        <div className="grid gap-6 md:grid-cols-[3fr_2fr] md:gap-12 lg:grid-cols-[573fr_380fr] lg:gap-14">
           <SectionTitle eyebrow={legacy.eyebrow}>
             <RichText text={legacy.title} />
           </SectionTitle>
@@ -42,14 +42,14 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="relative mt-5 aspect-[1008/527] overflow-hidden rounded-[20px]" data-reveal>
+        <div className="relative mt-8 aspect-[1008/527] overflow-hidden rounded-[20px]" data-reveal>
           <Image src={images.legacy} alt="Looking up at glass skyscrapers in the fog" fill sizes="(min-width: 1024px) 1008px, 100vw" className="object-cover" />
         </div>
       </section>
 
       {/* 3. About */}
-      <section id="about" className="container-content scroll-mt-8 pt-9 lg:pt-9">
-        <div className="grid gap-8 md:grid-cols-[1fr_410px] md:gap-9">
+      <section id="about" className="container-content section-space scroll-mt-8">
+        <div className="grid gap-8 md:grid-cols-[562fr_410fr] md:gap-9">
           <div className="flex flex-col">
             <SectionTitle eyebrow={about.eyebrow}>
               <RichText text={about.title} />
@@ -67,17 +67,17 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="relative hidden aspect-[410/535] overflow-hidden rounded-[20px] md:block" data-reveal>
-            <Image src={images.about} alt="Cable-stayed bridge in black and white" fill sizes="410px" className="object-cover" />
+            <Image src={images.about} alt="Cable-stayed bridge in black and white" fill sizes="(min-width: 768px) 41vw, 100vw" className="object-cover" />
           </div>
         </div>
       </section>
 
       {/* 4. Services */}
-      <section id="services" className="container-content scroll-mt-8 pt-11">
+      <section id="services" className="container-content section-space scroll-mt-8">
         <SectionTitle eyebrow={solutions.eyebrow} align="center">
           <RichText text={solutions.title} />
         </SectionTitle>
-        <div className="mt-6 grid grid-cols-2 gap-3 lg:mt-8 lg:grid-cols-4 lg:gap-[10px]">
+        <div className="mt-8 grid grid-cols-2 gap-3 lg:mt-10 lg:grid-cols-4 lg:gap-[10px]">
           {solutions.items.map((item) => (
             <article key={item.title} className="card flex flex-col p-2.5 pb-6 lg:min-h-[272px]" data-reveal>
               <Image src={item.icon} alt="" width={50} height={50} className="h-9 w-9 lg:mt-6 lg:h-[50px] lg:w-[50px]" />
@@ -89,30 +89,30 @@ export default function HomePage() {
       </section>
 
       {/* 5. Why choose us */}
-      <section className="container-content pt-12 lg:pt-14">
+      <section className="container-content section-space">
         <SectionTitle eyebrow={sustainability.eyebrow} align="center" className="mx-auto max-w-[620px]">
           <RichText text={sustainability.title} accentClass="accent block" />
         </SectionTitle>
-        <div className="mt-8 grid gap-4 md:grid-cols-[692px_1fr] lg:gap-[18px]">
+        <div className="mt-8 grid gap-4 lg:mt-10 lg:grid-cols-[692fr_298fr] lg:gap-[18px]">
           <div className="relative aspect-[692/319] overflow-hidden rounded-[20px]" data-reveal>
             <Image src={images.expertise} alt="Rooftop terrace overlooking a city skyline" fill sizes="(min-width: 1024px) 692px, 100vw" className="object-cover" />
           </div>
           <FeatureCard title={sustainability.items[0].title} body={sustainability.items[0].body} />
         </div>
-        <div className="mt-4 grid gap-4 md:grid-cols-[1fr_698px] lg:mt-[18px] lg:gap-5">
-          <FeatureCard title={sustainability.items[1].title} body={sustainability.items[1].body} className="order-2 md:order-1" />
-          <div className="relative order-1 aspect-[698/305] overflow-hidden rounded-[20px] md:order-2" data-reveal>
+        <div className="mt-4 grid gap-4 lg:mt-[18px] lg:grid-cols-[290fr_698fr] lg:gap-5">
+          <FeatureCard title={sustainability.items[1].title} body={sustainability.items[1].body} className="order-2 lg:order-1" />
+          <div className="relative order-1 aspect-[698/305] overflow-hidden rounded-[20px] lg:order-2" data-reveal>
             <Image src={images.innovation} alt="Modern office towers seen from below" fill sizes="(min-width: 1024px) 698px, 100vw" className="object-cover" />
           </div>
         </div>
       </section>
 
       {/* 6. Projects */}
-      <section id="projects" className="container-content scroll-mt-8 pt-16 lg:pt-[72px]">
+      <section id="projects" className="container-content section-space scroll-mt-8">
         <SectionTitle eyebrow={projects.eyebrow} align="center">
           {projects.title}
         </SectionTitle>
-        <div className="mt-10 grid gap-6 md:grid-cols-[699px_1fr] md:gap-9 lg:mt-[68px]">
+        <div className="mt-8 grid gap-6 lg:mt-14 lg:grid-cols-[699fr_273fr] lg:gap-9">
           <div className="relative aspect-[699/388] overflow-hidden rounded-[20px]" data-reveal>
             <Image src={images.agartha} alt="Agartha: thatched eco-retreat buildings around a natural pool" fill sizes="(min-width: 1024px) 699px, 100vw" className="object-cover" />
           </div>
@@ -123,21 +123,21 @@ export default function HomePage() {
             external
           />
         </div>
-        <div className="mt-10 grid gap-6 md:mt-9 md:grid-cols-[1fr_700px] md:gap-9">
+        <div className="mt-14 grid gap-6 lg:mt-9 lg:grid-cols-[272fr_700fr] lg:gap-9">
           <ProjectText
             title={projects.modconOne.title}
             body={projects.modconOne.body}
             href={projects.modconOne.href}
-            className="order-2 md:order-1"
+            className="order-2 lg:order-1"
           />
-          <div className="relative order-1 aspect-[700/352] overflow-hidden rounded-[20px] md:order-2" data-reveal>
+          <div className="relative order-1 aspect-[700/352] overflow-hidden rounded-[20px] lg:order-2" data-reveal>
             <Image src={images.modconOneTower} alt="MODCON ONE: a white tower with curved, planted balconies" fill sizes="(min-width: 1024px) 700px, 100vw" className="object-cover" />
           </div>
         </div>
       </section>
 
       {/* 7. Achievements */}
-      <section className="container-content pt-12">
+      <section className="container-content section-space">
         <SectionTitle eyebrow={award.eyebrow} align="center" className="mx-auto max-w-[980px]">
           <RichText text={award.title} />
         </SectionTitle>
@@ -156,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* 8. Empowering growth */}
-      <section className="container-content pt-16">
+      <section className="container-content section-space">
         <div className="relative flex min-h-[420px] flex-col items-center justify-center overflow-hidden rounded-[20px] bg-ink px-6 py-16 text-center text-paper lg:min-h-[500px]">
           <Image src={images.homeHero[1]} alt="" fill sizes="(min-width: 1024px) 1008px, 100vw" className="object-cover opacity-40" aria-hidden />
           <div className="relative" data-reveal>
@@ -164,7 +164,7 @@ export default function HomePage() {
               <RichText text={growth.title} accentClass="font-accent italic text-paper" />
             </h2>
             <p className="mt-6 text-[18px]">{growth.eyebrow}</p>
-            <Link href="/contact" className="btn-pill mt-6 px-4 py-2 text-[14px]">
+            <Link href="/contact" className="btn-pill mt-6 text-[14px]">
               Get a Quote <ArrowDownRight />
             </Link>
           </div>
@@ -172,10 +172,10 @@ export default function HomePage() {
       </section>
 
       {/* 9. How we work */}
-      <section className="container-content pb-20 pt-9 lg:pb-[72px]">
-        <div className="grid gap-8 md:grid-cols-[422px_1fr] md:gap-9">
+      <section className="container-content section-space pb-20 lg:pb-24">
+        <div className="grid gap-8 md:grid-cols-[422fr_550fr] md:gap-9">
           <div className="relative aspect-[422/565] overflow-hidden rounded-[20px]" data-reveal>
-            <Image src={images.process} alt="Sunlight on angled glass panels" fill sizes="(min-width: 1024px) 422px, 100vw" className="object-cover" />
+            <Image src={images.process} alt="Sunlight on angled glass panels" fill sizes="(min-width: 768px) 42vw, 100vw" className="object-cover" />
           </div>
           <div className="md:pt-3">
             <SectionTitle eyebrow={processIntro.eyebrow}>{processIntro.title}</SectionTitle>
@@ -227,7 +227,7 @@ function ProjectText({
       <p className="mt-5 text-[16px] leading-[1.4] text-muted">{body}</p>
       <Link
         href={href}
-        className="btn-outline mt-8 self-start md:mt-auto"
+        className="btn-outline mt-8 self-start lg:mt-auto"
         {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       >
         View Project <ArrowRight />
