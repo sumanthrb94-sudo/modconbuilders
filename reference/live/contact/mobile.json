@@ -1,0 +1,765 @@
+{
+  "title": "Contact Modcon Builders",
+  "description": "Get in touch with Modcon for inquiries, collaborations, or project discussions. Our team is ready to help bring your ideas to life with expertise and dedication.",
+  "height": 1400,
+  "bodyBg": "rgba(0, 0, 0, 0)",
+  "images": [
+    {
+      "kind": "img",
+      "src": "https://static.wixstatic.com/media/142b26_d5cd255396474a538d7fb57d39628174~mv2.jpeg/v1/fill/w_780,h_1330,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_284839602.jpeg",
+      "alt": "AdobeStock_284839602.jpeg",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 665
+    },
+    {
+      "kind": "wow",
+      "src": "142b26_d5cd255396474a538d7fb57d39628174~mv2.jpeg",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 665
+    }
+  ],
+  "texts": [
+    {
+      "tag": "A",
+      "text": "Let's Talk",
+      "href": "https://www.modconbuilders.com/contact",
+      "font": "Arial, Helvetica, sans-serif",
+      "size": "10px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(0, 0, 0)",
+      "bg": "rgb(163, 155, 138)",
+      "lh": "normal",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 225,
+      "y": 19,
+      "w": 93,
+      "h": 30
+    },
+    {
+      "tag": "H1",
+      "text": "Let’s Discuss Your Next Project",
+      "font": "wfont_4e657b_ece26a5440b04333ac815afdf1ae8909, wf_ece26a5440b04333ac815afdf, orig_engravers_gothic",
+      "size": "30px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "normal",
+      "ls": "normal",
+      "tt": "none",
+      "align": "center",
+      "x": 12,
+      "y": 98,
+      "w": 367,
+      "h": 64
+    },
+    {
+      "tag": "A",
+      "text": "Y",
+      "href": "https://www.modconbuilders.com/",
+      "font": "wfont_4e657b_ece26a5440b04333ac815afdf1ae8909, wf_ece26a5440b04333ac815afdf, orig_engravers_gothic",
+      "size": "30px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "normal",
+      "ls": "normal",
+      "tt": "none",
+      "align": "center",
+      "x": 224,
+      "y": 98,
+      "w": 11,
+      "h": 32
+    },
+    {
+      "tag": "H2",
+      "text": "We're here to serve your next high-end cutting-edge project. Please fill in the form and we'll get back to you asap.",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "18px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "27px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 36,
+      "y": 226,
+      "w": 319,
+      "h": 108
+    },
+    {
+      "tag": "INPUT",
+      "text": "Name Surname",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "16px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "22.4px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 36,
+      "y": 354,
+      "w": 307,
+      "h": 38
+    },
+    {
+      "tag": "INPUT",
+      "text": "Email",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "16px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "22.4px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 36,
+      "y": 413,
+      "w": 307,
+      "h": 38
+    },
+    {
+      "tag": "INPUT",
+      "text": "Contact Number",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "16px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "22.4px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 88,
+      "y": 472,
+      "w": 255,
+      "h": 38
+    },
+    {
+      "tag": "INPUT",
+      "text": "Day",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "16px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "22.4px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 36,
+      "y": 592,
+      "w": 307,
+      "h": 38
+    },
+    {
+      "tag": "INPUT",
+      "text": "Year",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "16px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "22.4px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 36,
+      "y": 772,
+      "w": 307,
+      "h": 38
+    },
+    {
+      "tag": "TEXTAREA",
+      "text": "Your Message",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "16px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "22.4px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 36,
+      "y": 839,
+      "w": 319,
+      "h": 75
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Get a Quote",
+      "font": "wfont_4e657b_ece26a5440b04333ac815afdf1ae8909, wf_ece26a5440b04333ac815afdf, orig_engravers_gothic",
+      "size": "17px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "22.1px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "center",
+      "x": 36,
+      "y": 943,
+      "w": 319,
+      "h": 42
+    },
+    {
+      "tag": "P",
+      "text": "Instagram  |  YouTube  |  Facebook",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "8px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(47, 49, 43)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "11.2px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 8,
+      "y": 1018,
+      "w": 118,
+      "h": 22
+    },
+    {
+      "tag": "A",
+      "text": "Instagram",
+      "href": "https://www.instagram.com/modconbuilders/",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "8px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(47, 49, 43)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "11.2px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 8,
+      "y": 1018,
+      "w": 37,
+      "h": 10
+    },
+    {
+      "tag": "A",
+      "text": "YouTube",
+      "href": "https://youtube.com/@modconbuilders?si=tMqLzPO8gbGR9le0",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "8px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(47, 49, 43)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "11.2px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 56,
+      "y": 1018,
+      "w": 31,
+      "h": 10
+    },
+    {
+      "tag": "A",
+      "text": "Facebook",
+      "href": "https://www.facebook.com/share/1Az3T16mny/?mibextid=wwXIfr",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "8px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(47, 49, 43)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "11.2px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 12,
+      "y": 1029,
+      "w": 35,
+      "h": 10
+    },
+    {
+      "tag": "P",
+      "text": "© Modcon Builders 2024. All Rights Reserved.Built by Asterisks.Inc",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "8px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(47, 49, 43)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "11.2px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "right",
+      "x": 229,
+      "y": 1018,
+      "w": 154,
+      "h": 22
+    },
+    {
+      "tag": "A",
+      "text": "Asterisks.Inc",
+      "href": "https://www.asterisks.media/",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "8px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(47, 49, 43)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "11.2px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "right",
+      "x": 332,
+      "y": 1029,
+      "w": 50,
+      "h": 10
+    },
+    {
+      "tag": "H4",
+      "text": "Links",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "12.48px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(2, 21, 89)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "17.472px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "left",
+      "x": 8,
+      "y": 1179,
+      "w": 374,
+      "h": 17
+    },
+    {
+      "tag": "H4",
+      "text": "About\n\nServices\n\nAgartha : Roots of Earth\n\nContact Us",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "10.4px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(94, 94, 94)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "12.48px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "left",
+      "x": 8,
+      "y": 1205,
+      "w": 374,
+      "h": 87
+    },
+    {
+      "tag": "H4",
+      "text": "Address",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "12.48px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(2, 21, 89)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "17.472px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "left",
+      "x": 8,
+      "y": 1304,
+      "w": 374,
+      "h": 17
+    },
+    {
+      "tag": "H4",
+      "text": "Hyderabad | UAE\n\nmodconbuilders@gmail.com\n\n+91 9534869999",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "10.4px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(94, 94, 94)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "12.48px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "left",
+      "x": 8,
+      "y": 1330,
+      "w": 374,
+      "h": 62
+    },
+    {
+      "tag": "A",
+      "text": "Hyderabad",
+      "href": "https://g.co/kgs/pQjH4TV",
+      "font": "wfont_b57df7_70a0a63065ab4e5f818e1b6e351b5ff4, wf_70a0a63065ab4e5f818e1b6e3, orig_satoshi_medium",
+      "size": "10.4px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(94, 94, 94)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "lh": "12.48px",
+      "ls": "normal",
+      "tt": "none",
+      "align": "left",
+      "x": 8,
+      "y": 1329,
+      "w": 51,
+      "h": 13
+    },
+    {
+      "tag": "A",
+      "text": "Get in Touch",
+      "href": "https://wa.me/message/NF3QEBTUO5ISG1",
+      "font": "Arial, Helvetica, sans-serif",
+      "size": "10px",
+      "weight": "400",
+      "style": "normal",
+      "color": "rgb(0, 0, 0)",
+      "bg": "rgb(38, 75, 59)",
+      "lh": "normal",
+      "ls": "normal",
+      "tt": "none",
+      "align": "start",
+      "x": 238,
+      "y": 598,
+      "w": 140,
+      "h": 45
+    }
+  ],
+  "links": [
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/contact",
+      "text": "Let's Talk"
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": "Y"
+    },
+    {
+      "href": "https://www.instagram.com/modconbuilders/",
+      "text": "Instagram"
+    },
+    {
+      "href": "https://youtube.com/@modconbuilders?si=tMqLzPO8gbGR9le0",
+      "text": "YouTube"
+    },
+    {
+      "href": "https://www.facebook.com/share/1Az3T16mny/?mibextid=wwXIfr",
+      "text": "Facebook"
+    },
+    {
+      "href": "https://www.asterisks.media/",
+      "text": "Asterisks.Inc"
+    },
+    {
+      "href": "https://g.co/kgs/pQjH4TV",
+      "text": "Hyderabad"
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/contact",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://wa.me/message/NF3QEBTUO5ISG1",
+      "text": "Get in Touch"
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/contact",
+      "text": ""
+    },
+    {
+      "href": "https://www.modconbuilders.com/",
+      "text": ""
+    },
+    {
+      "href": "https://www.instagram.com/modconbuilders/",
+      "text": ""
+    },
+    {
+      "href": "https://www.facebook.com/share/1Az3T16mny/?mibextid=wwXIfr",
+      "text": ""
+    }
+  ],
+  "fonts": [
+    {
+      "family": "wf_70a0a63065ab4e5f818e1b6e3",
+      "weight": "normal",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "wf_e2198da1f8a64a73853349719",
+      "weight": "normal",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "wf_ece26a5440b04333ac815afdf",
+      "weight": "normal",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "din-next-w01-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "din-next-w01-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "din-next-w01-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "wf_2d51552ba4854b449e16cdf51",
+      "weight": "normal",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "wf_70a0a63065ab4e5f818e1b6e3",
+      "weight": "normal",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "wf_ece26a5440b04333ac815afdf",
+      "weight": "normal",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "fraunces",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew01-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew01-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew01-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew02-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew02-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew02-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew02-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew10-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew10-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew10-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew10-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew10-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helveticaneuew10-45ligh",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "madefor-text",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "madefor-text",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    }
+  ],
+  "screenshots": [
+    "mobile-00.jpg",
+    "mobile-01.jpg"
+  ]
+}
