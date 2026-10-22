@@ -1,0 +1,10 @@
+# Downloaded or generated; recreate with `python3 mm.py assets`, `font`, `music`, `shots`, `render`.
+vendor/
+fonts/
+sfx/
+audio/
+shots/
+qc/
+out/
+beats.json
+__pycache__/
