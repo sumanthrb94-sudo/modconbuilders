@@ -1,0 +1,51 @@
+name: Capture live site
+
+# Screenshots the live Wix site and downloads its photos into public/images/,
+# then commits the results back to the branch that triggered the run.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/capture-live-site.yml
+      - scripts/capture-live-site.mjs
+
+permissions:
+  contents: write
+
+concurrency: capture-live-site
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          mkdir -p /tmp/pw && cd /tmp/pw
+          npm init -y >/dev/null
+          npm i playwright@1.48.2
+          npx playwright install --with-deps chromium
+
+      - name: Capture
+        env:
+          PW_DIR: /tmp/pw
+        run: node scripts/capture-live-site.mjs
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reference/live public/images
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Capture live site reference and images"
+          for i in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            sleep 5
+          done
+          exit 1
