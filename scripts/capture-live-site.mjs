@@ -1,6 +1,6 @@
 // Captures the live Wix site as a reference for the rebuild:
 // screenshots (desktop + mobile), text styles, image positions, fonts,
-// and downloads the photos into public/images/.
+// and downloads the photos into reference/live/images/.
 // Runs in GitHub Actions (see .github/workflows/capture-live-site.yml).
 import { createRequire } from 'node:module';
 import fs from 'node:fs/promises';
@@ -11,7 +11,7 @@ const { chromium, devices } = require('playwright');
 
 const BASE = 'https://www.modconbuilders.com';
 const OUT = 'reference/live';
-const IMG_OUT = 'public/images';
+const IMG_OUT = 'reference/live/images';
 const MAX_PAGES = 15;
 
 const slug = (p) => (p === '/' ? 'home' : p.replace(/^\/|\/$/g, '').replace(/[^a-z0-9]+/gi, '-'));

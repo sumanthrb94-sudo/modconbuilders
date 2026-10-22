@@ -1,13 +1,11 @@
 name: Capture live site
 
-# Screenshots the live Wix site and downloads its photos into public/images/,
-# then commits the results back to the branch that triggered the run.
+# Screenshots the live Wix site and downloads its photos into reference/live/images/,
+# then commits the results back to the branch it was run on. Run it manually from the
+# Actions tab to refresh the reference (the site's own images in public/images/ were
+# renamed from an earlier run and aren't touched).
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - .github/workflows/capture-live-site.yml
-      - scripts/capture-live-site.mjs
 
 permissions:
   contents: write
@@ -41,7 +39,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reference/live public/images
+          git add reference/live
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Capture live site reference and images"
           for i in 1 2 3; do
