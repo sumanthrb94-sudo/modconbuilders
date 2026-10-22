@@ -1,0 +1,43 @@
+name: Fetch fonts
+
+# Downloads Satoshi (Fontshare, free for commercial use under the ITF Free Font License)
+# into public/fonts/ and commits it. Satoshi isn't on Google Fonts, so it's self-hosted.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/fetch-fonts.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Satoshi
+        run: |
+          set -euo pipefail
+          tmp=$(mktemp -d)
+          curl -fsSL -o "$tmp/satoshi.zip" "https://api.fontshare.com/v2/fonts/download/satoshi"
+          unzip -q "$tmp/satoshi.zip" -d "$tmp/satoshi"
+          mkdir -p public/fonts/satoshi
+          find "$tmp/satoshi" -path '*WEB*' -name '*.woff2' -exec cp {} public/fonts/satoshi/ \;
+          find "$tmp/satoshi" -iname '*licen*' -exec cp {} public/fonts/satoshi/ \; || true
+          ls -la public/fonts/satoshi
+
+      - name: Commit fonts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/fonts
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Add Satoshi web fonts from Fontshare"
+          for i in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            sleep 5
+          done
+          exit 1
