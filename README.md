@@ -11,8 +11,10 @@ npm install
 cp .env.example .env.local   # add your Resend key (see below)
 npm run dev                  # http://localhost:3000
 npm run build && npm start   # production build
-npm run lint
+npm run typecheck && npm run lint && npm test
 ```
+
+See AGENTS.md for the house rules.
 
 ## Where things live
 
@@ -37,7 +39,9 @@ To change wording, edit `content/site.ts`. In titles, `*word*` renders as the go
 
 - Colours (`tailwind.config.ts`): `gold #A39B8A`, `ink #4A4B4F`, `body #5E5E5E`, `muted #8E8E8E`, `paper #ECECEC`, `navy #021559` (footer headings), `sand #E8D9B5` (Modcon One wellness cards).
 - Fonts: `font-sans` Satoshi (body and headings), `font-accent` Instrument Serif Italic (gold words), `font-display` Syncopate (hero, contact heading), `font-form` Inter Tight (forms), `font-helvetica` (Modcon One page).
-- Helpers in `app/globals.css`: `.container-content` (1008px column), `.eyebrow`, `.h-section`, `.accent`, `.btn-pill`, `.btn-outline`, `.card`. Add `data-reveal` to any element to fade it in on scroll.
+- Helpers in `app/globals.css`: `.container-content` (1008px column), `.eyebrow`, `.h-section`, `.accent`, `.btn-pill`, `.btn-outline`, `.card`.
+- Motion (CSS ports of motion-primitives, off when the visitor prefers reduced motion): `data-reveal` fades an element in with a blur as it scrolls into view, an inline `--i` staggers siblings, `<RichText words />` reveals headings word by word with a shimmer on gold accent words, the hero photos drift slowly, and buttons spring on press.
+- Phones: Modcon One has a sticky action bar (call, WhatsApp, book a visit); Home and Contact keep the floating WhatsApp button.
 
 ## Contact forms
 

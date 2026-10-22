@@ -23,7 +23,7 @@ export default function HeroSlideshow({ images, interval = 6000 }: { images: str
           fill
           preload={i === 0}
           sizes="100vw"
-          className={`object-cover transition-opacity duration-[1500ms] ${i === index ? 'opacity-100' : 'opacity-0'}`}
+          className={`object-cover transition-opacity duration-[1500ms] ${i === index ? 'drift opacity-100' : 'opacity-0'}`}
         />
       ))}
     </div>

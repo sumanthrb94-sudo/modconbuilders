@@ -53,7 +53,10 @@ export default function Footer() {
           ))}
         </p>
         <p>
-          © {site.name} {new Date().getFullYear()}. All Rights Reserved.
+          © {site.name} {new Date().getFullYear()}. All Rights Reserved.{' '}
+          <a href="https://brandmintstudios.in" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            Built with Brand Mint
+          </a>
         </p>
       </div>
     </footer>

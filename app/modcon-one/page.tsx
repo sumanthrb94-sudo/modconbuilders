@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import ContactForm, { type Field } from '@/components/ContactForm';
 import Faq from '@/components/Faq';
+import RichText from '@/components/RichText';
 import { brochureHref, images, mapEmbedSrc, modconOne, site } from '@/content/site';
 
 export const metadata: Metadata = {
@@ -43,7 +45,7 @@ export default function ModconOnePage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-[#c3cfe2] via-[#dbe3ef] to-white pt-28 lg:pt-24">
         <div className="relative z-10 px-5 text-center" data-reveal>
           <h1 className="mx-auto max-w-[1132px] font-helvetica text-[40px] font-light leading-[1.05] tracking-[-0.03em] text-white [text-shadow:0_2px_24px_rgba(60,80,110,0.35)] sm:text-[60px] lg:text-[91px]">
-            {intro.title}
+            <RichText text={intro.title} words />
           </h1>
           <p className="mx-auto mt-5 max-w-[360px] font-helvetica text-[16px] text-white [text-shadow:0_1px_12px_rgba(60,80,110,0.45)] lg:text-[18px]">
             {intro.body}
@@ -66,7 +68,7 @@ export default function ModconOnePage() {
       <section id="why" className="scroll-mt-20 px-5 pt-12 lg:px-9 lg:pt-16">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{intro.ctaTitle}</p>
-          <h2 className={`${title} mx-auto max-w-[880px]`}>{intro.ctaBody}</h2>
+          <h2 className={`${title} mx-auto max-w-[880px]`}><RichText text={intro.ctaBody} words /></h2>
         </div>
         <ContactForm
           fields={quickVisitFields}
@@ -126,11 +128,11 @@ export default function ModconOnePage() {
       <section id="living" className="m1-space scroll-mt-20 px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{villaments.eyebrow}</p>
-          <h2 className={title}>{villaments.title}</h2>
+          <h2 className={title}><RichText text={villaments.title} words /></h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3 lg:mt-12 lg:gap-7">
           {villaments.items.map((item, i) => (
-            <article key={item.title} data-reveal>
+            <article key={item.title} style={{ '--i': i } as CSSProperties} data-reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image src={images.m1Villaments[i]} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
               </div>
@@ -166,12 +168,12 @@ export default function ModconOnePage() {
       <section className="m1-space px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{commercial.eyebrow}</p>
-          <h2 className={`${title} text-ink`}>{commercial.title}</h2>
+          <h2 className={`${title} text-ink`}><RichText text={commercial.title} words /></h2>
           <p className="mt-4 font-helvetica text-[16px] capitalize text-[#323232] lg:text-[18px]">{commercial.body}</p>
         </div>
         <div className="mt-10 grid gap-7 md:grid-cols-2 lg:mt-12 lg:grid-cols-3">
-          {commercial.items.map((item) => (
-            <article key={item.title} className="rounded-lg bg-[#F7F7F7] px-6 pb-7 pt-7 text-center" data-reveal>
+          {commercial.items.map((item, i) => (
+            <article key={item.title} className="rounded-lg bg-[#F7F7F7] px-6 pb-7 pt-7 text-center" style={{ '--i': i % 3 } as CSSProperties} data-reveal>
               <span className="mx-auto block h-px w-[244px] max-w-full bg-black/80" aria-hidden />
               <Image src={item.icon} alt="" width={64} height={64} className="mx-auto mt-6 h-16 w-16" />
               <h3 className="mt-5 font-helvetica text-[24px] capitalize text-black lg:text-[27px]">{item.title}</h3>
@@ -185,12 +187,12 @@ export default function ModconOnePage() {
       <section className="m1-space px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{wellness.eyebrow}</p>
-          <h2 className={`${title} mx-auto max-w-[690px] lg:leading-[1.5]`}>{wellness.title}</h2>
+          <h2 className={`${title} mx-auto max-w-[690px] lg:leading-[1.5]`}><RichText text={wellness.title} words /></h2>
           <p className="mt-3 font-helvetica text-[16px] capitalize text-body lg:text-[18px]">{wellness.body}</p>
         </div>
         <div className="mt-10 grid gap-7 md:grid-cols-2 lg:mt-12">
-          {wellness.items.map((item) => (
-            <article key={item.title} className="rounded-lg bg-sand p-2.5" data-reveal>
+          {wellness.items.map((item, i) => (
+            <article key={item.title} className="rounded-lg bg-sand p-2.5" style={{ '--i': i % 2 } as CSSProperties} data-reveal>
               <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-md sm:aspect-[651/336]">
                 <Image src={item.image} alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/35 to-black/60" aria-hidden />
@@ -209,7 +211,7 @@ export default function ModconOnePage() {
       <section id="location" className="m1-space scroll-mt-20 px-5 lg:px-9">
         <div className="text-center" data-reveal>
           <p className={eyebrow}>{location.eyebrow}</p>
-          <h2 className="font-sans text-[28px] font-medium tracking-[-0.02em] text-black lg:text-[32px]">{location.title}</h2>
+          <h2 className="font-sans text-[28px] font-medium tracking-[-0.02em] text-black lg:text-[32px]"><RichText text={location.title} words /></h2>
         </div>
         <div className="mt-10 h-[360px] overflow-hidden rounded-lg lg:mt-12 lg:h-[560px]">
           <iframe
@@ -258,7 +260,7 @@ export default function ModconOnePage() {
       {/* FAQ */}
       <section id="faq" className="m1-space scroll-mt-20 px-5 lg:px-9">
         <div className="max-w-[830px]" data-reveal>
-          <h2 className="font-form text-[20px] font-medium tracking-[-0.02em] text-black">{faq.title}</h2>
+          <h2 className="font-form text-[20px] font-medium tracking-[-0.02em] text-black"><RichText text={faq.title} words /></h2>
           <p className="mt-6 font-form text-[20px] leading-[1.5] tracking-[-0.02em] text-black">{faq.body}</p>
         </div>
         <div className="mt-10 lg:mt-12">

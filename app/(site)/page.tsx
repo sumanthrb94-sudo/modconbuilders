@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroSlideshow from '@/components/HeroSlideshow';
@@ -17,7 +18,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/10" aria-hidden />
         <div className="relative z-10 px-5 text-center text-paper" data-reveal>
           <h1 className="font-display text-[30px] uppercase leading-[1.2] sm:text-[44px] lg:text-[60px] lg:leading-[1.1] xl:whitespace-nowrap">
-            {hero.title}
+            <RichText text={hero.title} words />
           </h1>
           <p className="mx-auto mt-6 max-w-[400px] text-[16px] leading-[1.4]">{hero.body}</p>
           <Link
@@ -33,7 +34,7 @@ export default function HomePage() {
       <section className="container-content section-space">
         <div className="grid gap-6 md:grid-cols-[3fr_2fr] md:gap-12 lg:grid-cols-[573fr_380fr] lg:gap-14">
           <SectionTitle eyebrow={legacy.eyebrow}>
-            <RichText text={legacy.title} />
+            <RichText text={legacy.title} words />
           </SectionTitle>
           <div className="flex flex-col justify-between gap-8" data-reveal>
             <p className="text-[18px] leading-[1.4] text-[#323232]">{legacy.body}</p>
@@ -52,7 +53,7 @@ export default function HomePage() {
         <div className="grid gap-8 md:grid-cols-[562fr_410fr] md:gap-9">
           <div className="flex flex-col">
             <SectionTitle eyebrow={about.eyebrow}>
-              <RichText text={about.title} />
+              <RichText text={about.title} words />
             </SectionTitle>
             <div className="relative my-6 aspect-square overflow-hidden rounded-[20px] md:hidden">
               <Image src={images.about} alt="Cable-stayed bridge in black and white" fill sizes="100vw" className="object-cover" />
@@ -75,11 +76,11 @@ export default function HomePage() {
       {/* 4. Services */}
       <section id="services" className="container-content section-space scroll-mt-8">
         <SectionTitle eyebrow={solutions.eyebrow} align="center">
-          <RichText text={solutions.title} />
+          <RichText text={solutions.title} words />
         </SectionTitle>
         <div className="mt-8 grid grid-cols-2 gap-3 lg:mt-10 lg:grid-cols-4 lg:gap-[10px]">
-          {solutions.items.map((item) => (
-            <article key={item.title} className="card flex flex-col p-2.5 pb-6 lg:min-h-[272px]" data-reveal>
+          {solutions.items.map((item, i) => (
+            <article key={item.title} className="card flex flex-col p-2.5 pb-6 lg:min-h-[272px]" style={{ '--i': i } as CSSProperties} data-reveal>
               <Image src={item.icon} alt="" width={50} height={50} className="h-9 w-9 lg:mt-6 lg:h-[50px] lg:w-[50px]" />
               <h3 className="mt-8 text-[18px] leading-[1.4] text-ink lg:mt-10 lg:text-[23px]">{item.title}</h3>
               <p className="mt-2 text-[13px] leading-[1.4] text-black lg:text-[14px]">{item.body}</p>
@@ -91,7 +92,7 @@ export default function HomePage() {
       {/* 5. Why choose us */}
       <section className="container-content section-space">
         <SectionTitle eyebrow={sustainability.eyebrow} align="center" className="mx-auto max-w-[620px]">
-          <RichText text={sustainability.title} accentClass="accent block" />
+          <RichText text={sustainability.title} accentClass="accent block" words />
         </SectionTitle>
         <div className="mt-8 grid gap-4 lg:mt-10 lg:grid-cols-[692fr_298fr] lg:gap-[18px]">
           <div className="relative aspect-[692/319] overflow-hidden rounded-[20px]" data-reveal>
@@ -110,7 +111,7 @@ export default function HomePage() {
       {/* 6. Projects */}
       <section id="projects" className="container-content section-space scroll-mt-8">
         <SectionTitle eyebrow={projects.eyebrow} align="center">
-          {projects.title}
+          <RichText text={projects.title} words />
         </SectionTitle>
         <div className="mt-8 grid gap-6 lg:mt-14 lg:grid-cols-[699fr_273fr] lg:gap-9">
           <div className="relative aspect-[699/388] overflow-hidden rounded-[20px]" data-reveal>
@@ -139,7 +140,7 @@ export default function HomePage() {
       {/* 7. Achievements */}
       <section className="container-content section-space">
         <SectionTitle eyebrow={award.eyebrow} align="center" className="mx-auto max-w-[980px]">
-          <RichText text={award.title} />
+          <RichText text={award.title} words />
         </SectionTitle>
         <div className="relative mt-8 aspect-[1008/567] overflow-hidden rounded-[20px]" data-reveal>
           <Image
@@ -161,7 +162,7 @@ export default function HomePage() {
           <Image src={images.homeHero[1]} alt="" fill sizes="(min-width: 1024px) 1008px, 100vw" className="object-cover opacity-40" aria-hidden />
           <div className="relative" data-reveal>
             <h2 className="text-[38px] leading-[1.25] lg:text-[57px] lg:leading-[1.3]">
-              <RichText text={growth.title} accentClass="font-accent italic text-paper" />
+              <RichText text={growth.title} accentClass="font-accent italic text-paper" words />
             </h2>
             <p className="mt-6 text-[18px]">{growth.eyebrow}</p>
             <Link href="/contact" className="btn-pill mt-6 text-[14px]">
@@ -178,10 +179,12 @@ export default function HomePage() {
             <Image src={images.process} alt="Sunlight on angled glass panels" fill sizes="(min-width: 768px) 42vw, 100vw" className="object-cover" />
           </div>
           <div className="md:pt-3">
-            <SectionTitle eyebrow={processIntro.eyebrow}>{processIntro.title}</SectionTitle>
+            <SectionTitle eyebrow={processIntro.eyebrow}>
+              <RichText text={processIntro.title} words />
+            </SectionTitle>
             <ol className="mt-6 space-y-6">
               {process.map((step, i) => (
-                <li key={step.title} className="grid grid-cols-[52px_1fr] gap-x-0" data-reveal>
+                <li key={step.title} className="grid grid-cols-[52px_1fr] gap-x-0" style={{ '--i': i } as CSSProperties} data-reveal>
                   <span className="font-accent text-[38px] italic leading-none text-gold">{String(i + 1).padStart(2, '0')}.</span>
                   <div>
                     <h3 className="pt-2 text-[18px] font-medium text-ink">{step.title}</h3>

@@ -13,6 +13,10 @@
   ::selection {
     @apply bg-gold text-white;
   }
+  :focus-visible {
+    outline: 2px solid theme('colors.gold');
+    outline-offset: 3px;
+  }
 }
 
 @layer components {
@@ -36,33 +40,124 @@
     @apply font-accent italic text-gold;
   }
   .btn-pill {
-    @apply inline-flex min-h-[44px] items-center gap-3 rounded-full bg-gold px-6 py-3 text-[16px] text-white transition-colors hover:bg-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+    @apply inline-flex min-h-[44px] items-center gap-3 rounded-full bg-gold px-6 py-3 text-[16px] text-white hover:bg-gold-dark;
   }
   .btn-outline {
-    @apply inline-flex min-h-[44px] items-center gap-3 rounded-full border border-ink px-5 py-2.5 text-[14px] text-ink transition-colors hover:bg-ink hover:text-white;
+    @apply inline-flex min-h-[44px] items-center gap-3 rounded-full border border-ink px-5 py-2.5 text-[14px] text-ink hover:bg-ink hover:text-white;
   }
   .card {
     @apply rounded-2xl border border-line/70 bg-white;
   }
+  .skip-link {
+    @apply fixed left-4 top-4 z-[60] -translate-y-24 rounded-full bg-ink px-5 py-3 text-[15px] text-white transition-transform focus:translate-y-0;
+  }
 }
 
-/* Fade-up on scroll. Only hidden once JS has marked the page, so content never stays invisible. */
+/* ---------- Motion primitives (ported from motion-primitives, CSS only) ----------
+   Everything is only hidden once JS has marked the page (.js), so content never stays invisible,
+   and the reduced-motion guard at the bottom turns it all off. */
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Spring press on buttons and links styled as buttons. */
+.btn-pill,
+.btn-outline {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.45s var(--ease-spring);
+}
+.btn-pill:active,
+.btn-outline:active {
+  transform: scale(0.96);
+}
+
+/* FadeIn: fade-in-blur on scroll. `--i` staggers siblings (set inline on lists). The filter is
+   dropped once visible, so it can't trap position:fixed children. */
 .js [data-reveal] {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(28px);
+  filter: blur(10px);
+  transition:
+    opacity 0.9s var(--ease-out),
+    transform 0.9s var(--ease-out),
+    filter 0.9s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 90ms);
 }
 .js [data-reveal].is-visible {
   opacity: 1;
   transform: none;
+  filter: none;
 }
+
+/* TextEffect: words fade in one by one once their revealed ancestor is visible. */
+.js [data-reveal] .tw {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.35em);
+  filter: blur(8px);
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out),
+    filter 0.7s var(--ease-out);
+  transition-delay: calc(120ms + var(--w, 0) * 70ms);
+}
+.js [data-reveal].is-visible .tw {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* TextShimmer: one light sweep across the gold accent words after they land. */
+.js [data-reveal].is-visible .accent .tw,
+.js [data-reveal].is-visible .accent-shimmer {
+  background-image: linear-gradient(100deg, currentColor 42%, #efe7d6 50%, currentColor 58%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 1.6s var(--ease-out) 0.9s 1 both;
+}
+@keyframes shimmer {
+  to {
+    background-position: 0 0;
+  }
+}
+
+/* Hero photos: a slow drift so the first screen feels alive. */
+@keyframes drift {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.drift {
+  animation: drift 9s var(--ease-out) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .js [data-reveal] {
+  .js [data-reveal],
+  .js [data-reveal] .tw {
     opacity: 1;
     transform: none;
+    filter: none;
     transition: none;
+  }
+  .js [data-reveal].is-visible .accent .tw,
+  .js [data-reveal].is-visible .accent-shimmer,
+  .drift {
+    animation: none;
+  }
+  .btn-pill:active,
+  .btn-outline:active {
+    transform: none;
   }
 }
