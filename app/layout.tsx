@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     description: site.description,
     images: [{ url: '/images/home-hero-1.jpg', width: 2400, height: 1500 }],
   },
-  icons: { icon: '/logo.svg' },
 };
 
 export const viewport: Viewport = {
