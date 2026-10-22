@@ -54,7 +54,7 @@ export default function ModconOnePage() {
             src={images.m1HeroBuilding}
             alt="MODCON ONE: a white mid-rise with curved, planted balconies"
             fill
-            priority
+            preload
             sizes="100vw"
             className="object-contain object-bottom"
           />

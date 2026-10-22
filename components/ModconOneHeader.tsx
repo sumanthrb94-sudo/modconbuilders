@@ -21,7 +21,7 @@ export default function ModconOneHeader() {
     <header className="absolute inset-x-0 top-0 z-40">
       <div className="flex items-center justify-between gap-6 px-4 py-3 lg:px-5">
         <Link href="/" aria-label={`${site.name} home`}>
-          <Image src="/logo.svg" alt={site.name} width={647} height={288} priority className="h-12 w-auto lg:h-[72px]" />
+          <Image src="/logo.svg" alt={site.name} width={647} height={288} preload className="h-12 w-auto lg:h-[72px]" />
         </Link>
 
         <nav aria-label="Modcon One sections" className="hidden lg:block">
@@ -37,7 +37,7 @@ export default function ModconOneHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#visit" className="rounded-md border border-black bg-white/60 px-4 py-2 font-helvetica text-[14px] text-black hover:bg-black hover:text-white lg:px-5 lg:text-[15px]">
+          <a href="#visit" className="inline-flex min-h-[44px] items-center rounded-md border border-black bg-white/60 px-4 py-2 font-helvetica text-[14px] text-black hover:bg-black hover:text-white lg:px-5 lg:text-[15px]">
             Book a Site Visit
           </a>
           <button

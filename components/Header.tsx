@@ -13,7 +13,12 @@ export default function Header() {
   // The contact page has a black background, so the menu button switches to light lines.
   const onDark = pathname === '/contact';
 
-  useEffect(() => setOpen(false), [pathname]);
+  // Close the menu after navigating (e.g. browser back), without an effect.
+  const [lastPath, setLastPath] = useState(pathname);
+  if (pathname !== lastPath) {
+    setLastPath(pathname);
+    setOpen(false);
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -30,7 +35,7 @@ export default function Header() {
     <header className="absolute inset-x-0 top-0 z-40">
       <div className="flex items-center justify-between px-5 py-4 lg:px-9 lg:py-6">
         <Link href="/" aria-label={`${site.name} home`} className="block">
-          <Image src="/logo.svg" alt={site.name} width={647} height={288} priority className="h-11 w-auto lg:h-[54px]" />
+          <Image src="/logo.svg" alt={site.name} width={647} height={288} preload className="h-11 w-auto lg:h-[54px]" />
         </Link>
 
         <div className="flex items-center gap-4 lg:gap-10">

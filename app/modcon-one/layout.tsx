@@ -11,7 +11,7 @@ export default function ModconOneLayout({ children }: { children: React.ReactNod
         <p>
           © {site.name} {new Date().getFullYear()}. All Rights Reserved.
         </p>
-        <Link href="/" className="py-2 hover:text-white">
+        <Link href="/" className="py-3 hover:text-white">
           modconbuilders.com
         </Link>
       </footer>

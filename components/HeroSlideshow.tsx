@@ -21,7 +21,7 @@ export default function HeroSlideshow({ images, interval = 6000 }: { images: str
           src={src}
           alt=""
           fill
-          priority={i === 0}
+          preload={i === 0}
           sizes="100vw"
           className={`object-cover transition-opacity duration-[1500ms] ${i === index ? 'opacity-100' : 'opacity-0'}`}
         />
