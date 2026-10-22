@@ -1,8 +1,10 @@
 # Modcon Builders website
 
-Next.js 14 (App Router) + TypeScript + Tailwind rebuild of [modconbuilders.com](https://www.modconbuilders.com), which currently runs on Wix.
+Next.js 16 (App Router) + React 19 + TypeScript + Tailwind rebuild of [modconbuilders.com](https://www.modconbuilders.com), which currently runs on Wix.
 
 ## Run it
+
+Needs Node 22 (see `.nvmrc`).
 
 ```bash
 npm install
@@ -51,10 +53,16 @@ Set these in `.env.local` for local work and in Vercel → Project → Settings 
 
 ## Deploy (Vercel)
 
-1. Import the GitHub repo in Vercel. Framework: Next.js, no extra settings.
-2. Add the three environment variables above.
+The project is ready for Vercel as-is: no `vercel.json` is needed, Node 22 is pinned in `package.json`, and `.vercelignore` skips the reference capture.
+
+1. In Vercel, **Add New → Project** and import `sumanthrb94-sudo/modconbuilders`. Framework preset: Next.js. Leave the build and output settings at their defaults.
+2. Add the three environment variables above (Production and Preview).
 3. Test on the `*.vercel.app` URL, including sending each form.
 4. Only then point the `modconbuilders.com` DNS at Vercel and remove the domain from Wix.
+
+## SEO and security
+
+`app/sitemap.ts`, `app/robots.ts` and `app/icon.svg` generate `/sitemap.xml`, `/robots.txt` and the favicon. `next.config.mjs` adds basic security headers.
 
 ## Helper workflows (GitHub Actions, run manually)
 

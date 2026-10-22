@@ -8,7 +8,7 @@ The site was rebuilt from the live Wix pages (Home, Modcon One, Contact). Copy, 
 
 | Area | State |
 |---|---|
-| Next.js 14 + TS + Tailwind scaffold | Done. `npm run build` and `npm run lint` pass |
+| Next.js 16 + React 19 + TS + Tailwind | Done. `npm run build` and `npm run lint` pass. `npm audit --omit=dev` reports 0 vulnerabilities (moved off Next.js 14, which has critical advisories) |
 | Home (`/`) | Done: all live sections, live copy with typos fixed ("Explore Our", "permaculture farmland") |
 | Modcon One (`/modcon-one`) | Done: all live sections, FAQ, map, both forms |
 | Contact (`/contact`) | Done |
@@ -16,7 +16,8 @@ The site was rebuilt from the live Wix pages (Home, Modcon One, Contact). Copy, 
 | Logos | Header and footer logos extracted as SVG (`public/logo.svg`, `public/logo-wordmark.svg`) |
 | Fonts | Satoshi self-hosted; Instrument Serif, Inter Tight and Syncopate via `next/font/google` |
 | Contact forms | Send email via Resend. Validation and error handling tested; **a real send is untested** (needs your key) |
-| Deploy | Not started. Waiting for your go-ahead |
+| Layout check | No sideways scrolling at 1440/1024/768/390px, equal left/right margins on every section, one spacing rhythm (96px between home sections, 128px on Modcon One), touch targets at least 44px |
+| Vercel | Ready: Node 22 pinned, favicon, sitemap, robots, security headers, clean-clone `npm ci && npm run build` passes. Not deployed yet |
 
 ## Needs a decision from you
 
